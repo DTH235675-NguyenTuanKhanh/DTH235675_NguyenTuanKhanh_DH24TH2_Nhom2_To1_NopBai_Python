@@ -1,0 +1,5 @@
+t = int(input("Nhập số giây:"))
+Gio=(t//3600)%24
+Phut=(t%3600)//60
+Giay=(t%3600)%60
+print(Gio,":",Phut,":",Giay)
