@@ -1,0 +1,11 @@
+m=int(input("Nhập tháng:"))
+if m<0 or m>12:
+    print("Tháng Không Hợp Lệ!")
+if 1<=m<=3:
+    print("Thuộc quý 1")
+elif 4<=m<=6:
+    print("Thuộc quý 2")
+elif 7<=m<=9:
+    print("Thuộc quý 3")
+else:
+    print("Thuộc quý 4")

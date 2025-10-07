@@ -1,0 +1,13 @@
+import math
+
+def tinh_S(x, n):
+    S = 0
+    for i in range(n + 1):
+        mu = 2 * i + 1
+        S += (x ** mu) / math.factorial(mu)
+    return S
+x = float(input("Nhập x: "))
+n = int(input("Nhập n: "))
+
+ket_qua = tinh_S(x, n)
+print(f"Giá trị biểu thức S(x, n) = {ket_qua}")

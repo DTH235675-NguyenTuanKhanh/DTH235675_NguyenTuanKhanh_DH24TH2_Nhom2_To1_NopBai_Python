@@ -1,0 +1,23 @@
+donvi=["","Một","Hai","Ba","Bốn","Năm","Sáu","Bảy","Tám","Chín"]
+n=int(input("Nhập số: "))
+if(n<0 or n>99):
+    print("Số không hợp lệ!")
+else:
+    chuc=n//10
+    dv=n%10
+    if chuc==1:
+        if dv==0:
+            print("Mười")
+        elif dv==5:
+            print("Mười lăm")
+        else:
+            print("Mười",donvi[dv])
+    else:
+        if dv==0:
+            print(donvi[chuc],"mươi")
+        elif dv==1:
+            print(donvi[chuc],"mươi mốt")
+        elif dv==5:
+            print(donvi[chuc],"mươi lăm")
+        else:
+            print(donvi[chuc],"mươi",donvi[dv])

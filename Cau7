@@ -1,0 +1,18 @@
+d=int(input("Nhập ngày:"))
+m=int(input("Nhập tháng:"))
+y=int(input("Nhập năm:"))
+
+def namnhuan(nam):
+    return ( (y % 4 ==0 and y % 100 != 0) or y % 400 == 0)
+ntt=[0,31,28,31,30,31,30,31,31,30,31,30,31]
+if namnhuan(y):
+    ntt[2]=29
+
+d+=1
+if d>ntt[m]:
+    d=1
+    m+=1
+    if m>12:
+        m=1
+        y+=1
+print("Ngày kế tiếp là: {}/{}/{}".format(d,m,y))

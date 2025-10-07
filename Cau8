@@ -1,0 +1,10 @@
+a=int(input("Nhập a:"))
+b=int(input("Nhập b:"))
+t=a+b
+print("Tổng:",t)
+h=a-b
+print("Hiệu:",h)
+n=a*b
+print("Tích:",n)
+k=a/b
+print("Thương:",k)

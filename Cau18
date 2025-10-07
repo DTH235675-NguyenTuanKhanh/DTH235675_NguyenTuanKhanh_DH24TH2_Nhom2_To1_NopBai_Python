@@ -1,0 +1,59 @@
+def hinh1(n, m):
+    for i in range(n):
+        for j in range(m):
+            if i == 0 or i == n-1 or j == 0 or j == m-1:
+                print("*", end=" ")
+            else:
+                print(" ", end=" ")
+        print()
+
+def hinh2(n):
+    for i in range(1, n+1):
+        for j in range(i):
+            print("*", end=" ")
+        print()
+
+def hinh3(n):
+    for i in range(1, n+1):
+        for j in range(1, i+1):
+            if j == 1 or j == i or i == n:
+                print("*", end=" ")
+            else:
+                print(" ", end=" ")
+        if i != n:
+            print()
+        else:
+            for j in range(2, n+1):
+                print("*", end=" ")
+            print()
+    for i in range(n-1, 0, -1):
+        print("  " * (n-1), end="")
+        for j in range(1, n+1):
+            if j == n-i+1 or j == n or i == n: 
+                print("*", end=" ")
+            else:
+             print(" ", end=" ")
+        print()
+
+while True:
+    print("\n--- MENU ---")
+    print("1. Hình chữ nhật rỗng")
+    print("2. Tam giác vuông cạnh trái")
+    print("3. Hai tam giác chéo nhau")
+    print("0. Thoát")
+
+    choice = int(input("Chọn hình (0-3): "))
+    if choice == 0:
+        break
+
+    n = int(input("Nhập chiều cao n: "))
+
+    if choice == 1:
+        m = int(input("Nhập chiều rộng m: "))
+        hinh1(n, m)
+    elif choice == 2:
+        hinh2(n)
+    elif choice == 3:
+        hinh3(n)
+    else:
+        print("Lựa chọn không hợp lệ!")
